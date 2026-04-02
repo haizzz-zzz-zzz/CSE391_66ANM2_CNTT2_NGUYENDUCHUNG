@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Management</title>
+    <style>
+        
+        * { box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5; /* Nền xám */
+            margin: 0; padding: 0;
+        }
+
+        .navbar {
+            background-color: #212529; color: white;
+            padding: 10px 20px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .nav-left { display: flex; align-items: center; gap: 20px; }
+        .brand { font-size: 20px; font-weight: bold; text-decoration: none; color: white; }
+        .nav-links a { color: #aaa; text-decoration: none; margin-right: 15px; }
+        .nav-links a.active { color: white; }
+
+        .search-box { display: flex; gap: 5px; }
+        .search-box input { padding: 6px; border-radius: 4px; border: none; outline: none; }
+        .search-box button {
+            background: transparent; border: 1px solid #aaa; color: #fff;
+            padding: 6px 12px; border-radius: 4px; cursor: pointer;
+        }
+
+        .main-wrapper {
+            width: 95%; 
+            max-width: 1600px; 
+            margin: 30px auto;
+        }
+
+        .page-header {
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            margin-bottom: 15px; 
+        }
+        
+        .page-header h2 { 
+            margin: 0; 
+            font-size: 32px; 
+            color: #333; 
+        }
+
+        .btn {
+            padding: 10px 20px; 
+            border: none; border-radius: 4px;
+            cursor: pointer; text-decoration: none; display: inline-block; font-weight: bold;
+        }
+        .btn-add { background-color: #0d6efd; color: white; }
+        .btn-add:hover { background-color: #0b5ed7; }
+
+        .table-card {
+            background-color: white; 
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px; 
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse; 
+        }
+
+        th, td {
+            text-align: left;
+            padding: 20px 15px; 
+            border-bottom: 1px solid #dee2e6;
+            vertical-align: middle;
+            white-space: nowrap; 
+            font-size: 16px; 
+        }
+
+        th { font-weight: bold; color: #212529; border-bottom: 2px solid #dee2e6; }
+        tbody tr:hover { background-color: #f8f9fa; }
+
+        .action-btns { display: flex; gap: 10px; }
+        .btn-sm { padding: 8px 16px; font-size: 14px; color: white; font-weight: normal; border-radius: 4px; }
+        .btn-edit { background-color: #ffc107; color: #000; }
+        .btn-delete { background-color: #dc3545; }
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="nav-left">
+            <a href="#" class="brand">HR Management</a>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+    </div>
+
+    <div class="main-wrapper">
+        
+        <div class="page-header">
+            <h2>Employee</h2>
+            <a href="add.html" class="btn btn-add">+ Add</a>
+        </div>
+
+        <div class="table-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Position</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Fatima Beatriz</td>
+                        <td>Fatima Beatriz@gmail.com</td>
+                        <td>0985674321</td>
+                        <td>Staff</td>
+                        <td>
+                            <div class="action-btns">
+                                <button class="btn btn-sm btn-edit">Edit</button>
+                                <button class="btn btn-sm btn-delete">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Gabriel Hanna</td>
+                        <td>Gabriel Hanna@gmail.com</td>
+                        <td>0353674231</td>
+                        <td>Staff</td>
+                        <td>
+                            <div class="action-btns">
+                                <button class="btn btn-sm btn-edit">Edit</button>
+                                <button class="btn btn-sm btn-delete">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Charles Diya</td>
+                        <td>Charles Diya@gmail.com</td>
+                        <td>0347658833</td>
+                        <td>Staff</td>
+                        <td>
+                            <div class="action-btns">
+                                <button class="btn btn-sm btn-edit">Edit</button>
+                                <button class="btn btn-sm btn-delete">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>4</td>
+                        <td>Frank Lamdo</td>
+                        <td>Frank Lamdo@gmail.com</td>
+                        <td>0975444768</td>
+                        <td>Manager</td>
+                        <td>
+                            <div class="action-btns">
+                                <button class="btn btn-sm btn-edit">Edit</button>
+                                <button class="btn btn-sm btn-delete">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Louis Tom</td>
+                        <td>Louis Tom@gmail.com</td>
+                        <td>0789568223</td>
+                        <td>Staff</td>
+                        <td>
+                            <div class="action-btns">
+                                <button class="btn btn-sm btn-edit">Edit</button>
+                                <button class="btn btn-sm btn-delete">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>
